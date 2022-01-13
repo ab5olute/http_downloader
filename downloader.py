@@ -33,7 +33,7 @@ def download_all(url: str, path: Path, start_from: int = 1) -> None:
             folder_name: str = get_folder_name(link)
             download_all(url + f'/{folder_name}/', path.joinpath(Path(folder_name)))
         else:
-            file_name = get_file_name(link)
+            file_name: str = get_file_name(link)
             download_file(url + file_name, file_name, path)
 
 
@@ -41,4 +41,4 @@ if __name__ == '__main__':
     url_: str = ''
     path_: Path = Path('testmedia')
 
-    download_all(url_, Path().absolute().joinpath(path_))
+    download_all(url_, Path().absolute().joinpath(path_), start_from=1)
