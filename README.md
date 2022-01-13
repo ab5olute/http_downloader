@@ -1,5 +1,5 @@
 # http_downloader
-Download all files from Index of /folder using Python
+Download all files with subfolders from Index of /folder using Python
 
 # How to use:
 
